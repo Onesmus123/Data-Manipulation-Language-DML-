@@ -8,12 +8,15 @@ The database consists of multiple tables representing different entities.
 - **Product**: Stores product information.
 - **Orders**: Stores order details.
 
-## Creating Tables
+Here is the complete set of SQL commands you can run in MySQL Workbench:
 
-Here are the SQL commands to create the tables:
+```sql 
 
-```sql
+-- Create the database
+CREATE DATABASE my_database;
+USE my_database;
 
+-- Create the tables
 CREATE TABLE Customer (
     Customer_id VARCHAR(10) PRIMARY KEY,
     Customer_Name VARCHAR(50),
@@ -37,13 +40,6 @@ CREATE TABLE Orders (
     FOREIGN KEY (Customer_id) REFERENCES Customer(Customer_id),
     FOREIGN KEY (Product_id) REFERENCES Product(Product_id)
 );
-
-
-## Data Insertion
-
-The following SQL commands insert sample data into the tables:
-
-```sql
 
 -- Insert data into Customer table
 INSERT INTO Customer (Customer_id, Customer_Name, Customer_Tel) VALUES
